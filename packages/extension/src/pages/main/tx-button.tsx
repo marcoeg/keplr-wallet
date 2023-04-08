@@ -2,7 +2,8 @@ import React, { FunctionComponent, useEffect, useRef, useState } from "react";
 
 import styleTxButton from "./tx-button.module.scss";
 
-import { Button, Tooltip } from "reactstrap";
+import {  Tooltip } from "reactstrap";
+//import { Button, Tooltip } from "reactstrap";
 
 import { observer } from "mobx-react-lite";
 
@@ -11,9 +12,9 @@ import { useStore } from "../../stores";
 import Modal from "react-modal";
 
 import { FormattedMessage } from "react-intl";
-import { useHistory } from "react-router";
+// import { useHistory } from "react-router";
 
-import classnames from "classnames";
+// import classnames from "classnames";
 import { Dec } from "@keplr-wallet/unit";
 import { BuySupportServiceInfo, useBuy } from "../../hooks";
 import classNames from "classnames";
@@ -33,7 +34,7 @@ export const TxButtonView: FunctionComponent = observer(() => {
   const [sendTooltipOpen, setSendTooltipOpen] = useState(false);
   const [buyTooltipOpen, setBuyTooltipOpen] = useState(false);
 
-  const history = useHistory();
+  // const history = useHistory();
 
   const hasAssets =
     queryBalances.balances.find((bal) => bal.balance.toDec().gt(new Dec(0))) !==
@@ -46,7 +47,7 @@ export const TxButtonView: FunctionComponent = observer(() => {
 
   return (
     <div className={styleTxButton.containerTxButton}>
-      <Button
+      {/*<Button
         innerRef={buyBtnRef}
         className={classnames(styleTxButton.button, {
           disabled: !isBuySupportChain,
@@ -62,7 +63,7 @@ export const TxButtonView: FunctionComponent = observer(() => {
         }}
       >
         <FormattedMessage id="main.account.button.buy" />
-      </Button>
+      </Button>*/}
       {!isBuySupportChain ? (
         <Tooltip
           placement="bottom"
@@ -74,7 +75,7 @@ export const TxButtonView: FunctionComponent = observer(() => {
           <FormattedMessage id="main.account.button.buy.not-support" />
         </Tooltip>
       ) : null}
-      <Button
+      {/* <Button
         className={styleTxButton.button}
         color="primary"
         outline
@@ -85,13 +86,13 @@ export const TxButtonView: FunctionComponent = observer(() => {
         }}
       >
         <FormattedMessage id="main.account.button.deposit" />
-      </Button>
+      </Button> */}
       {/*
         "Disabled" property in button tag will block the mouse enter/leave events.
         So, tooltip will not work as expected.
         To solve this problem, don't add "disabled" property to button tag and just add "disabled" class manually.
        */}
-      <Button
+      {/* <Button
         innerRef={sendBtnRef}
         className={classnames(styleTxButton.button, {
           disabled: !hasAssets,
@@ -108,7 +109,7 @@ export const TxButtonView: FunctionComponent = observer(() => {
         }}
       >
         <FormattedMessage id="main.account.button.send" />
-      </Button>
+      </Button> */}
       {!hasAssets ? (
         <Tooltip
           placement="bottom"

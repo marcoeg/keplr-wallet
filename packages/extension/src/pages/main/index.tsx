@@ -8,8 +8,8 @@ import style from "./style.module.scss";
 import { Menu } from "./menu";
 import { AccountView } from "./account";
 import { TxButtonView } from "./tx-button";
-import { AssetView } from "./asset";
-import { StakeView } from "./stake";
+// import { AssetView } from "./asset";
+//import { StakeView } from "./stake";
 
 import classnames from "classnames";
 import { useHistory } from "react-router";
@@ -168,9 +168,9 @@ export const MainPage: FunctionComponent = observer(() => {
         <CardBody>
           <div className={style.containerAccountInner}>
             <AccountView />
-            <AssetView />
+            {/* <AssetView /> */}
             {accountInfo.walletStatus !== WalletStatus.Rejected && (
-              <TxButtonView />
+               <TxButtonView />
             )}
           </div>
         </CardBody>
@@ -181,10 +181,10 @@ export const MainPage: FunctionComponent = observer(() => {
           target="_blank"
           rel="noreferrer"
         >
-          <img
+        {/*}  <img
             src={require("../../public/assets/img/icns-banner.png")}
             style={{ width: "100%", marginBottom: "12px" }}
-          />
+      /> */}
         </a>
       ) : null}
       {ChainIdHelper.parse(current.chainId).identifier === "stargaze" ? (
@@ -207,9 +207,9 @@ export const MainPage: FunctionComponent = observer(() => {
       {showVestingInfo ? <VestingInfo /> : null}
       {chainStore.current.walletUrlForStaking ? (
         <Card className={classnames(style.card, "shadow")}>
-          <CardBody>
+          {/*<CardBody>
             <StakeView />
-          </CardBody>
+      </CardBody>*/}
         </Card>
       ) : null}
       {hasTokens ? (
@@ -239,6 +239,7 @@ export const MainPage: FunctionComponent = observer(() => {
           </CardBody>
         </Card>
       ) : null}
+
     </HeaderLayout>
   );
 });

@@ -86,7 +86,7 @@ export const StakeView: FunctionComponent = observer(() => {
           type: "warning",
           placement: "top-center",
           duration: 5,
-          content: `Fail to withdraw rewards: ${e.message}`,
+          content: `Fail to withdraw rewards: $_{e.message}`,
           canDelete: true,
           transition: {
             duration: 0.25,
