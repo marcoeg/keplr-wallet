@@ -165,8 +165,8 @@ export interface MsgLink {
 // eslint-disable-next-line @typescript-eslint/ban-types
 export function renderUnknownMessage(msg: object) {
   return {
-    icon: undefined,
-    title: "Custom",
+    icon: "fas fa-check",
+    title: "     ",
     content: (
       <React.Fragment>
         <UnknownMsgView msg={msg} />
