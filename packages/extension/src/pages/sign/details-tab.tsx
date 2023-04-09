@@ -85,7 +85,7 @@ export const DetailsTab: FunctionComponent<{
           return (
             <React.Fragment key={i.toString()}>
               <MsgRender icon={msgContent.icon} title={msgContent.title}>
-                {msgContent.content}
+                {/*msgContent.content*/}
               </MsgRender>
               <hr />
             </React.Fragment>
