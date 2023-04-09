@@ -136,7 +136,7 @@ const StateRenderer: FunctionComponent = observer(() => {
         <Banner
           icon={require("./public/assets/logo-256.png")}
           logo={require("./public/assets/brand-text.png")}
-          subtitle="Wallet for the Interchain"
+          subtitle="Wallet for the FIFA Blockchain"
         />
       </div>
     );
@@ -146,7 +146,7 @@ const StateRenderer: FunctionComponent = observer(() => {
         <Banner
           icon={require("./public/assets/logo-256.png")}
           logo={require("./public/assets/brand-text.png")}
-          subtitle="Wallet for the Interchain"
+          subtitle="Wallet for the FIFA Blockchain"
         />
       </div>
     );

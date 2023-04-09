@@ -181,9 +181,9 @@ export const DetailsTab: FunctionComponent<{
                           className="ml-2"
                           style={{ display: "inline-block", fontSize: "12px" }}
                         >
-                          {priceStore
+                          {"   "/*priceStore
                             .calculatePrice(feeOrZero, language.fiatCurrency)
-                            ?.toString()}
+                      ?.toString()*/}
                         </div>
                       ) : null}
                     </React.Fragment>
