@@ -47,6 +47,7 @@ export const DetailsTab: FunctionComponent<{
     const { chainStore, priceStore, accountStore } = useStore();
     const intl = useIntl();
     const language = useLanguage();
+    preferNoSetFee = true;
 
     const mode = signDocHelper.signDocWrapper
       ? signDocHelper.signDocWrapper.mode
@@ -139,7 +140,7 @@ export const DetailsTab: FunctionComponent<{
             priceStore={priceStore}
             label={intl.formatMessage({ id: "sign.info.fee" })}
             gasLabel={intl.formatMessage({ id: "sign.info.gas" })}
-            showFeeCurrencySelectorUnderSetGas={true}
+            showFeeCurrencySelectorUnderSetGas={false}
           />
         ) : (
           <React.Fragment>
@@ -171,7 +172,7 @@ export const DetailsTab: FunctionComponent<{
 
                   return (
                     <React.Fragment>
-                      {feeOrZero.maxDecimals(6).trim(true).toString()}
+                      { "    "/*feeOrZero.maxDecimals(6).trim(true).toString()*/}
                       {priceStore.calculatePrice(
                         feeOrZero,
                         language.fiatCurrency
