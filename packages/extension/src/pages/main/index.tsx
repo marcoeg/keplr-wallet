@@ -125,7 +125,7 @@ export const MainPage: FunctionComponent = observer(() => {
     return true;
   });
 
-  const hasTokens = tokens.length > 0;
+  const hasTokens = tokens.length > 2;
 
   return (
     <HeaderLayout
