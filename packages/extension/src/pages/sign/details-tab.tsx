@@ -51,11 +51,11 @@ export const DetailsTab: FunctionComponent<{
     const mode = signDocHelper.signDocWrapper
       ? signDocHelper.signDocWrapper.mode
       : "none";
-    const msgs = signDocHelper.signDocWrapper
+    const msgs: string | any[] | readonly Msg[] = []; /*signDocHelper.signDocWrapper
       ? signDocHelper.signDocWrapper.mode === "amino"
         ? signDocHelper.signDocWrapper.aminoSignDoc.msgs
         : signDocHelper.signDocWrapper.protoSignDoc.txMsgs
-      : [];
+      : [];*/
 
     const renderedMsgs = (() => {
       if (mode === "amino") {
